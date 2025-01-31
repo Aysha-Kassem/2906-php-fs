@@ -1,5 +1,7 @@
 # PHP Functions Questions
 
+## create all functions with (return) statement
+
 ### 1. Write a function `addNumbers` that takes two numbers as parameters and returns their sum.
 
 ```php
