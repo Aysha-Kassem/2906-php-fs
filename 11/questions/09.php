@@ -2,7 +2,7 @@
 ## 9. Verify if a string is a valid hexadecimal color code (e.g., #ff5733).
 
 
-$pattern = "/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/";
+$pattern = "/^#([a-f\d]{6}|[a-f\d]{3})$/i";
 
 $colors = ['#ff5733', '#FFF', '#123ABC', 'red'];
 // Valid - Valid - Valid - invalid

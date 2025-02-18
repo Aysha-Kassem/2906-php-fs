@@ -3,7 +3,7 @@
 
 
 
-$pattern = "/^[a-zA-Z][a-zA-Z0-9_]{2,14}$/";
+$pattern = "/^[a-z][a-z\d_]{2,14}$/i";
 
 $usernames = ['user_123', '9username', '_invalidUser', 'validUser1'];
 // valid  - invalid  - invalid - valid

@@ -3,7 +3,7 @@
 
 
 
-$pattern = "/^[a-zA-Z0-9\s]+$/";
+$pattern = "/^[a-z\d\s]+$/i";
 
 $strings = ['Hello PHP', '12345', 'php@web', 'ValidName 2024'];
 //  valid - valid - invalid - valid

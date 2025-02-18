@@ -1,7 +1,7 @@
 <?php
 ## 4. Check if a string contains only alphabetic characters (both uppercase and lowercase).
 
-$pattern = "/^[a-zA-Z]+$/";
+$pattern = "/^[a-z]+$/i";
 
 $words = ['Hello', 'Welcome', 'Hello123', 'Good_day'];
 // Valid  -  Valid  - invalid - invalid
