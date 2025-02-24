@@ -37,7 +37,7 @@ if (empty($publication_year)) {
 }else{
     if(!is_numeric($publication_year)){ // positive number
         $errors['publication_year'] = 'Publication year must be a number';
-    }elseif(!preg_match('/^(19|20)\d{2}$/', $publication_year)){
+    }elseif(!preg_match('/^(16|17|18|19|20)\d{2}$/', $publication_year)){
         $errors['publication_year'] = 'Publication year must be a 4-digit number (e.g. 2021, 1956)';
     }
 }
