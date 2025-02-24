@@ -24,7 +24,7 @@ if (empty($title)) {
 if (empty($author)) {
     $errors['author'] = 'Author is required';
 }else{
-    if(!preg_match('/^[a-z\s]+$/', $author)){
+    if(!preg_match('/^[a-z\s]+$/i', $author)){
         $errors['author'] = 'Author can only contain letters';
     }
 }
