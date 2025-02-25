@@ -25,6 +25,12 @@ $old = $_SESSION['old'] ?? [];
     <style>
         .errors {
             color: tomato;
+            font-weight: bold;
+            font-size: 10px;
+        }
+        form{
+            display: grid;
+            gap: 20px;
         }
     </style>
 
@@ -37,14 +43,14 @@ $old = $_SESSION['old'] ?? [];
         <div>
             <label>Title</label>
             <input type="text" name="title" value="<?= @$old['title']; ?>" placeholder="3 - 30 characters">
-            <p class="errors"><?= @$errors['title']; ?></p>
+            <div class="errors"><?= @$errors['title']; ?></div>
         </div>
 
         <!-- body -->
         <div>
             <label>Body</label>
             <textarea name="body"><?= @$old['body'] ?></textarea>
-            <p class="errors"><?= @$errors['body']; ?></p>
+            <div class="errors"><?= @$errors['body']; ?></div>
         </div>
 
         <!-- Status -->
@@ -61,7 +67,7 @@ $old = $_SESSION['old'] ?? [];
                 <input type="radio" name="post_status_id" id="archived" value="3" <?= isset($old['post_status_id']) && $old['post_status_id'] == 3 ? 'checked' : '' ?>>
                 <label for="archived">Archived</label>
             </fieldset>
-            <p class="errors"><?= @$errors['post_status_id']; ?></p>
+            <div class="errors"><?= @$errors['post_status_id']; ?></div>
         </div>
 
         <!-- tags -->
@@ -80,7 +86,7 @@ $old = $_SESSION['old'] ?? [];
                 <input value="kids" type="checkbox" name="tags[]" id="kids" <?= isset($old['tags']) && in_array('kids', $old['tags']) ? 'checked' : ''; ?>>
                 <label for="kids">Kids</label>
             </fieldset>
-            <p class="errors"><?= @$errors['tags']; ?></p>
+            <div class="errors"><?= @$errors['tags']; ?></div>
         </div>
 
         <!-- Type -->
@@ -93,19 +99,29 @@ $old = $_SESSION['old'] ?? [];
                 <option <?= $old['type'] == '2' ? 'selected' : ''; ?> value="2">Art</option>
                 <option <?= $old['type'] == '3' ? 'selected' : ''; ?> value="3">Cars</option>
             </select>
-            <p class="errors"><?= @$errors['type']; ?></p>
+            <div class="errors"><?= @$errors['type']; ?></div>
         </div>
 
         <!-- Thumbnail -->
         <div>
             <label for="image">Post Image</label>
             <input type="file" name="image" accept=".jpg,.png" id="image">
+            <div class="errors"><?= @$errors['image'];?></div>
         </div>
 
         <!-- other images -->
         <div>
-            <label for="images">Post Images</label>
+            <label for="images">other Images</label>
             <input type="file" name="images[]" accept=".jpg,.png" id="images" multiple />
+            <div>
+                <?php
+                if (!empty($errors['images'])) {
+                    foreach ($errors['images'] as $name => $error) {
+                        echo '<div class="errors">' . '- ' . $name . ': ' . $error . '</div>';
+                    }
+                }
+                ?>
+            </div>
         </div>
 
         <div>
