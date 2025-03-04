@@ -11,4 +11,9 @@ require_once 'config/app.php';
 require_once 'helpers/functions.php';
 
 //  Define the database connection
-$db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT, DB_SOCKET);
+
+// Check connection
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
+}

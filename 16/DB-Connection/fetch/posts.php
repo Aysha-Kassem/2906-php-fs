@@ -1,5 +1,5 @@
 <?php
-require_once 'load.php';
+require_once '../load.php';
 
 // Get all posts
 $table = DB_PREFIX . 'posts';
@@ -22,10 +22,9 @@ $posts = $result->fetch_all(MYSQLI_ASSOC);
 // $posts = $result->fetch_all(MYSQLI_BOTH);
 // $posts = $result->fetch_all(3);
 
+// send the posts to components/posts/posts.php page
 
+require '../components/posts/posts.php';
 
-foreach ($posts as $post) {
-  require 'components/posts/card.php';
-  }
 
 

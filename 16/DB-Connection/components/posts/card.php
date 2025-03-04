@@ -16,6 +16,8 @@
 
 </style>
 
+
+
 <div class="card">
   <div class="container">
     <h4><b><?= $post['title']; ?></b></h4>
