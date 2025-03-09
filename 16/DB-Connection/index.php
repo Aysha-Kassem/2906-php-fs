@@ -1,6 +1,9 @@
 <?php
 require_once 'load.php';
 require_once 'fetch_all.php';
+// $posts = Post::all();
+// $count = Post::count();
+// dd($posts);
 ?>
 
 <style>
@@ -18,7 +21,7 @@ require_once 'fetch_all.php';
 
 <div class="posts">
     <?php
-    foreach ($posts as $post) {
+    foreach ($posts as $post) {        
         require 'components/templates/card.php';
     }
     ?>

@@ -17,3 +17,9 @@ $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT, DB_SOCKET);
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
+
+// load models
+$models = ['Post','Comment', 'PostStatuse','ReactionTypes', 'Replies', 'User'];
+foreach ($models as $model) {
+    require_once "models/$model.php";
+}
