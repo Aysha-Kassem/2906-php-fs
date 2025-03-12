@@ -1,5 +1,6 @@
 <?php
-class Reaction
+class Reaction extends Model
   {
+    const TABLE =  'reactions';
   //
   }

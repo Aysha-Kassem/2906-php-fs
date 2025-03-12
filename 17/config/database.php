@@ -1,12 +1,11 @@
 <?php
-// All database configurations are defined in this file
-
+// all database configuration and defied in this file
 const DB_HOST = 'localhost';
-
 const DB_USER = 'root';
+const DB_PASS = 'root';
+const DB_NAME = '2906_mysql_posts';
+const DB_PREFIX = 'pst_';
+const DB_SOCKET = '/Applications/MAMP/tmp/mysql/mysql.sock';
+const DB_PORT = '8889';
 
-const DB_PASSWORD = '';
 
-const DB_NAME = '2906_posts_fs';
-
-const DB_PREFIX = 'flo_';

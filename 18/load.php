@@ -10,7 +10,7 @@ require_once 'config/app.php';
 
 // load helpers
 
-require_once 'helpers/functions.php';
+// require_once 'helpers/functions.php';
 
 
 // Load models
@@ -30,6 +30,5 @@ require_once 'helpers/functions.php';
 //   }
 
 
-
 //  Define the database connection
-$db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT, DB_SOCKET);

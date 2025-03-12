@@ -3,7 +3,7 @@
         'name' => '2906/php',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f269913bcf9afaf91df4b577600d38a78671e2e7',
+        'reference' => '2fd694b6d6d66b4964457c56aa52547f9d73d1d3',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '2906/php' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f269913bcf9afaf91df4b577600d38a78671e2e7',
+            'reference' => '2fd694b6d6d66b4964457c56aa52547f9d73d1d3',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

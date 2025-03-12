@@ -1,11 +1,11 @@
 <?php
 class Post
-  {
+{
 
   const TABLE = 'posts';
 
   static function all(int $limit = 0)
-    {
+  {
     // Get all posts
     $table = DB_PREFIX . static::TABLE;
 
@@ -18,6 +18,7 @@ class Post
     // Execute the query and get the result set
     global $db;
     $result = $db->query($qry);
+    dd($result);
 
     // Fetch data from the result set
 
@@ -25,10 +26,10 @@ class Post
 
 
     return $posts;
-    }
+  }
 
   static function show(int $id)
-    {
+  {
     // Get all posts
     $table = DB_PREFIX . static::TABLE;
 
@@ -52,10 +53,10 @@ class Post
     // dd($post['title']);
 
     return $post;
-    }
+  }
 
   static function count()
-    {
+  {
     $table = DB_PREFIX . static::TABLE;
 
     global $db;
@@ -63,5 +64,5 @@ class Post
     $result = $db->query($qry);
     $row = $result->fetch_assoc();
     return $row['total'];
-    }
   }
+}

@@ -2,6 +2,7 @@
 require_once 'load.php';
 
 $posts = Post::all(5);
+dd($posts);
 
 $posts_count = Post::count();
 
