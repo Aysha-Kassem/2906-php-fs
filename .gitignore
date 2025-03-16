@@ -1,2 +1,6 @@
 *.txt
+<<<<<<< HEAD
 .DS_Store
+=======
+test/
+>>>>>>> 62cecbd6af6a74facbead43dcd969edcb0f98d5a
