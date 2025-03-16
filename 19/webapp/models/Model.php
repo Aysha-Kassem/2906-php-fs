@@ -1,4 +1,7 @@
 <?php
+namespace Models;
+use mysqli;
+
 class Model
   {
   public const TABLE = '';
@@ -7,7 +10,7 @@ class Model
 
   public static function connect()
     {
-    self::$db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+      self::$db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT, DB_SOCKET);
     }
 
   public static function all(int $limit = 0)

@@ -1,11 +1,11 @@
 <?php
 require_once 'load.php';
 
-$posts = Post::all(5);
+$posts = Models\Post::all(5);
 
-$posts_count = Post::count();
+$posts_count = Models\Post::count();
 
-$users_count = User::count();
+$users_count = Models\User::count();
 ?>
 
 <h2>Statistics</h2>

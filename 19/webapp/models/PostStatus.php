@@ -1,5 +1,7 @@
 <?php
-class PostStatus
+namespace Models;
+
+class PostStatus extends Model
   {
   //
   }

@@ -1,6 +1,7 @@
 <?php
+namespace Models;
 
-class Reply
+class Reply extends Model
   {
   //
   }

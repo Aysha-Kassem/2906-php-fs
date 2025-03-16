@@ -1,5 +1,7 @@
 <?php
-class Reaction
+namespace Models;
+
+class Reaction extends Model
   {
   //
   }

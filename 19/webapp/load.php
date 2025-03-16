@@ -13,4 +13,6 @@ require_once 'config/app.php';
 require_once 'helpers/functions.php';
 
 // Call the Model::connect
-Model::connect();
+Models\Model::connect();
+
+
