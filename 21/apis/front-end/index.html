@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+
+
+    <h1>Statistics</h1>
+
+    <h2>Recent Posts</h2>
+    <div id="recent_posts"></div>
+
+
+    <script>
+
+        // const api = 'https://backend.team-sharing.net/api/posts.php';
+
+        const api = 'http://localhost:7801/posts.php';
+
+        fetch(api)
+            .then(res => res.json())
+            .then(data => {
+
+
+                const recentPosts = data.slice(0, 5);
+                const postsHTML = recentPosts.map(post => {
+                    console.log(post.created_at);
+                    const post_date = new Date(post.created_at);
+
+                    console.log(post_date);
+
+                    return `
+                    <h3>${post.title}</h3>
+                    <p>${post.body}</p>
+                    <h6>${post_date}</h6>
+                    <hr>
+                `}).join('');
+
+                recent_posts.innerHTML = postsHTML;
+            })
+
+
+
+    </script>
+</body>
+
+</html>
